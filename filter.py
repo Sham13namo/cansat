@@ -10,10 +10,8 @@ TIME_OLD = 0
 TIME_NEW = 0
 dt = 0.
 def read_sensor():
-    data = Serial.readline().decode("utf-8")[:-2].split(';')
+    data = Serial.readline().decode("ütf-8")[:-2].split(";")
     
-    TIME_NEW = data[-1]
-    return float(data)
 
 def S():
     a = []
