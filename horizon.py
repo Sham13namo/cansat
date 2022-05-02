@@ -1,6 +1,4 @@
 
-from logging import exception
-from matplotlib import image
 import pygame
 import random
 import math
