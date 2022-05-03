@@ -18,8 +18,7 @@ angle = 0
 image = pygame.image.load("2.jpeg")
 rect = image.get_rect(center=(400, 300)) 
 
-while True:
-    angle+=1
+def rotate(angle):
     surf, r = rot_center(image, rect, angle)
     SCREEN.blit(surf, r)
     pygame.display.flip()

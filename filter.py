@@ -1,4 +1,4 @@
-
+import horizon
 from tkinter import W
 import numpy as np
 
@@ -41,6 +41,7 @@ while True:
     data = read_sensor()
     dt = TIME_NEW-TIME_OLD
     f.P = np.array([[1000.,dt ], [0., 1000.]])
+    horizon.rotate(data[-1])
     print(data)
     f.predict()
     f.update(data[2])
