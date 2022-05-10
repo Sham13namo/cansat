@@ -15,7 +15,7 @@ def rot_center(image, rect, angle):
         return rot_image,rot_rect
 angle = 0
 
-image = pygame.image.load("2.jpeg")
+image = pygame.image.load("2.png")
 rect = image.get_rect(center=(400, 300)) 
 
 def rotate(angle):

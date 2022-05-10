@@ -44,7 +44,7 @@ for i in range(200):
     TIME_NEW = float(data[1])
     dt = TIME_NEW-TIME_OLD
     f.P = np.array([[1000.,dt ], [0., 1000.]])
-    horizon.rotate(float(data[-3]))
+    horizon.rotate(float(data[-3])*-1)
     print(data)
     f.predict()
     f.update(float(data[2]))
