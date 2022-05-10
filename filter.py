@@ -10,6 +10,7 @@ Serial = serial.Serial('COM4', baudrate=9600 )
 TIME_OLD = 0
 TIME_NEW = 0
 dt = 0.
+is_land = 0 
 def read_sensor():
     data = Serial.readline().decode("utf-8")[:-2].split(";")
     print(data)
@@ -35,7 +36,7 @@ f.P *= 1000.
 S()
 f.Q = Q_discrete_white_noise(dim=2, dt=0.1, var=0.13)
 s = []
-for i in range(200):
+while is_land != 1:
     TIME_OLD = TIME_NEW
     
     
